@@ -18,7 +18,7 @@ module.exports = {
   plugins: [
     new htmlWebpackPlugin({
       template: path.join(__dirname, './src/assets/view/pages/home.pug'),
-      filename: 'home.html',
+      filename: 'index.html',
       title: 'RD Station',
       chunks: ['home'],
     }),
