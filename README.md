@@ -23,7 +23,7 @@
 - Acessar a pasta do projeto
 
   ```bash
-  npm install
+  cd rdstationteste
   ```
 
 - Rodar o projeto
