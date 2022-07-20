@@ -1,0 +1,43 @@
+header
+  div.wrapper-header
+    div.logo-wrapper
+      img(src='assets/images/logo.svg')
+    div.nav-wrapper
+      nav
+        ul.menu
+          li.menu-item
+            a(href='#menu1') Menu 1
+          li.menu-item.has-submenu
+            a Menu 2
+              img(src='assets/images/icons/chevron-down.svg')
+            ul.submenu
+              li.submenu-item
+                strong Metodologia
+                a(href='#submenu-metodologia-1') Tudo sobre Inbound Marketing
+              li.submenu-item
+                strong Cursos
+                a(href='#submenu-cursos-1') RD University
+                a(href='#submenu-cursos-2') Introdução ao Inbound Marketing
+                a(href='#submenu-cursos-3') RD Station Marketing Basic
+              li.submenu-item
+                strong Ferramentas
+                a(href='#submenu-ferramentas-1') Avalie seu funil de vendas
+                a(href='#submenu-ferramentas-2') Compare suas métricas de Email Marketing
+                a(href='#submenu-ferramentas-3') Calcule o ROI do RD Station Marketing
+          li.menu-item
+            a(href='#menu3') Menu 3
+          li.menu-item
+            a(href='#menu4') Menu 4
+          li.menu-item
+            a(href='#menu5') Menu 5
+    div.btn-wrapper
+      button.btn.-secondary.
+        Button
+      button.btn.-primary.
+        Button
+        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.2376 0.786174L13.5492 4.13013C13.7059 4.28837 13.7059 4.54493 13.5492 4.7032L10.2376 8.04716C9.98483 8.30244 9.55263 8.12165 9.55263 7.76064V5.36214H0.734652C0.513046 5.36214 0.333374 5.18071 0.333374 4.95693V3.87637C0.333374 3.65259 0.513046 3.47116 0.734652 3.47116H9.55263V1.07266C9.55263 0.711683 9.98487 0.530892 10.2376 0.786174Z" fill="#212429"/>
+        </svg>
+      button.menu-btn(aria-label="botao menu mobile").open
+        img(src="assets/images/icons/menu.svg" alt="menu button icon").open
+        img(src="assets/images/icons/close.svg" alt="menu button icon")

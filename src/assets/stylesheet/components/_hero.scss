@@ -1,0 +1,62 @@
+section.wrapper-hero {
+  background-image: url('../../images/shape.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+
+
+  .hero {
+    padding-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+
+    .hero-content {
+      margin-top: 5.5rem;
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        line-height: 100%;
+
+        span {
+          color: $color-primary;
+        }
+      }
+
+      p {
+        margin-top: 2.5rem;
+        font-size: 1.25rem;
+        line-height: 150%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+
+      .hero-content {
+        margin-top: 0rem;
+      }
+    }
+
+  }
+
+
+
+  .hero-form {
+    position: relative;
+    z-index: 2;
+
+
+    .wrapper-form {
+      margin-left: auto;
+    }
+
+
+
+    @media (max-width: 767px) {
+      margin: 2rem auto 2.5rem;
+
+    }
+  }
+}

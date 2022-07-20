@@ -1,0 +1,64 @@
+div.wrapper-form 
+  form(method="POST" action="https://app.rdstation.com.br/signup").form-content
+    fieldset.form-header
+      h4 Comece seus 10 dias de teste grátis do RD Station Marketing!
+      p Não precisa cadastrar cartão de crédito. 😉
+    fieldset.feedback
+      h3 "Obrigado!, entraremos em contato"  
+    fieldset.inputs
+      label Diga, qual seu nome?
+        input(type="text" name="name" placeholder="Insira seu nome" required)
+      label Seu email de trabalho
+        input(type="email" name="email" placeholder="Insira seu e-mail" required)
+      label Seu telefone
+        input(type="text" name="phone" maxlength="15" placeholder="Insira seu número de telefone com DDD" required)
+      label Seu cargo de ocupação
+        select(name="ocupation" placeholder="Selecione seu cargo" selected required) 
+          option(name="Selecione seu cargo" value="unselected") Selecione seu cargo
+          option(name="Sócio(a) / CEO / Proprietário(a)" value="socio_ceo_roprietario") Sócio(a) / CEO / Proprietário(a)
+          option(name="Diretor(a) de Vendas" value="d_vendas") Diretor(a) de Vendas
+          option(name="Diretor(a) de Marketing" value="d_marketing") Diretor(a) de Marketing
+          option(name="Diretor(a) Outras Áreas" value="d_outros") Diretor(a) Outras Áreas
+          option(name="Gerente de Marketing" value="g_marketing") Gerente de Marketing
+          option(name="Gerente de Vendas" value="g_vendas") Gerente de Vendas
+          option(name="Coordenador(a)/Supervisor(a) de Marketing" value="c_marketing") Coordenador(a)/Supervisor(a) de Marketing
+          option(name="Coordenador(a)/Supervisor(a) de Vendas" value="c_vendas") Coordenador(a)/Supervisor(a) de Vendas
+          option(name="Analista/Assistente de Marketing" value="a_marketing") Analista/Assistente de Marketing
+          option(name="Analista/Assistente de Vendas" value="a_vendas") Analista/Assistente de Vendas
+          option(name="Vendedor(a) / Executivo(a) de Contas" value="vendedor_contas") Vendedor(a) / Executivo(a) de Contas
+          option(name="Estudante" value="estudante") Estudante
+          option(name="Outros Cargos" value="outros_cargos") Outros Cargos
+
+      label Crie uma senha #[span.valid As senhas não coincidem]
+        div.toggle-visibility
+          img(src="assets/images/icons/eye.svg")
+          img(src="assets/images/icons/eye-slash.svg").visible
+        input(type="password" name="password" minlength="6" maxlength="10" title="Deve conter ao menos uma letra minúscula, uma letra maiúscula e no mínimo 6 caracteres" required)
+      label Confirme sua senha #[span As senhas não coincidem]
+        div.toggle-visibility
+          img(src="assets/images/icons/eye.svg")
+          img(src="assets/images/icons/eye-slash.svg").visible
+        input(type="password" name="confirm_password" minlength="6" maxlength="10"  required)
+      div.company
+        label(for="company") Qual o site da sua empresa?
+        div.radio-check
+          input(type="radio" id="site-checked" name="address_site" checked)
+          label(for="site-checked") Meu site é
+        input(type="url" name="company" placeholder="Insira o endereço do seu site" required)
+        div.radio-check
+          input(type="radio" id="site-unchecked" name="address_site" )
+          label(for="site-unchecked") Ainda não tenho site
+
+
+
+    fieldset.politics 
+      ul 
+        li Ao criar minha conta estou de acordo com os #[a(href="https://legal.rdstation.com/pt-BR/rdstation-services-agreement/" title="termos de uso") termos de uso] do software e #[a política de privacidade].
+        li Ao preencher o formulário, concordo em receber comunicações de acordo com meus interesses.
+        li *Você pode alterar suas permissões de comunicação a qualquer tempo.
+
+
+    button.btn.-highlighted Criar minha conta
+
+
+

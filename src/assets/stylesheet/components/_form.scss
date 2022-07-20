@@ -1,0 +1,207 @@
+.wrapper-form {
+  box-shadow: 0px 4px 12px rgba(33, 36, 41, 0.14);
+  border-radius: 2px;
+  padding: 2.5rem 1.5rem;
+  background-color: $color-white;
+  max-width: 31rem;
+
+
+  .form-content {
+    border: none;
+    display: flex;
+    flex-direction: column;
+
+    fieldset {
+      border: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    fieldset.inputs {
+      margin-top: 2.5rem;
+
+      label+label {
+        margin-top: 1rem;
+      }
+    }
+
+    fieldset.feedback {
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    .form-header {
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid $color-gray-30;
+      text-align: center;
+
+      h4 {
+        font-weight: 800;
+        line-height: 110%;
+      }
+
+      p {
+        margin-top: 1rem;
+        color: $color-gray-70;
+        line-height: 120%;
+      }
+    }
+
+    label {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      font-weight: 700;
+      line-height: 24px;
+      color: $color-black;
+
+      div {
+        height: auto;
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        padding-right: 0.25rem;
+
+        img {
+          display: none;
+          cursor: pointer;
+        }
+
+        img.visible {
+          display: inline-block;
+        }
+      }
+
+      >span {
+        right: 0;
+        position: absolute;
+        font-size: 0.75rem;
+        color: #fe2712;
+        font-weight: 700;
+        display: none;
+      }
+    }
+
+    input,
+    select {
+      margin-top: 0.5rem;
+      border: 2px solid $color-black;
+      font-size: 0.875rem;
+      color: $color-gray-60;
+      width: 100%;
+      height: 40px;
+      padding: 0 0.5rem;
+    }
+
+    select {
+      background-color: $color-white;
+
+
+    }
+
+    .company {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+
+      label {
+        margin-top: 1rem;
+        flex-direction: row-reverse;
+
+        input {
+          margin: 0 0.75rem 0 0;
+          width: auto;
+          height: auto;
+
+        }
+      }
+
+      .radio-check {
+        display: flex;
+        width: 100%;
+
+        label {
+          position: relative;
+          padding-left: 1.75rem;
+
+          &::before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            background-color: transparent;
+            display: block;
+            left: 0;
+            bottom: 5px;
+            border-radius: 100%;
+            border: 1px solid $color-gray-60;
+            cursor: pointer;
+          }
+
+          &::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            background-color: transparent;
+            display: block;
+            left: 5px;
+            bottom: 10px;
+            border-radius: 100%;
+            cursor: pointer;
+          }
+
+        }
+
+        input[name="address_site"] {
+          display: none;
+        }
+
+        input[name="address_site"]:checked~label::before {
+          background-color: $color-primary;
+          border: none;
+        }
+
+        input[name="address_site"]:checked~label::after {
+          background-color: #000;
+          border: none;
+        }
+      }
+    }
+
+
+
+    .politics {
+      ul {
+        list-style: disc;
+        padding: 1.5rem 0.5rem 1.5rem 1rem;
+
+        li {
+          list-style: disc;
+
+          font-size: 0.75rem;
+          line-height: 150%;
+          color: $color-gray-70;
+
+          a {
+            color: $color-primary;
+            font-size: inherit;
+          }
+        }
+      }
+    }
+
+    >button {
+      margin: 0 auto;
+      width: 256px;
+    }
+  }
+
+
+
+
+
+}

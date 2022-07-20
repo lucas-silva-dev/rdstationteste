@@ -1,0 +1,118 @@
+section.wrapper-list {
+  background-image: url('../../images/inverted-shape.png');
+
+  .list-content {
+    padding-top: 13.875rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8rem;
+
+    .photo {
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 120px solid transparent;
+        border-right: 120px solid transparent;
+        border-bottom: 120px solid $color-gray-10;
+        position: absolute;
+        top: -18px;
+        right: -78px;
+        transform: rotate(45deg);
+      }
+    }
+
+
+    .list {
+      h3 {
+        font-weight: 900;
+        line-height: 110%;
+      }
+
+      >p {
+        margin-top: 1.5rem;
+        font-size: 1.25rem;
+        line-height: 140%;
+      }
+
+      ul {
+        margin-top: 2.5rem;
+      }
+
+      ul li {
+        display: flex;
+        align-items: flex-start;
+
+        p {
+          font-size: 1rem;
+          line-height: 150%;
+        }
+
+        &+li {
+          margin-top: 1.5rem;
+        }
+
+        img {
+          margin-right: 0.5rem;
+
+          display: inline-block;
+        }
+      }
+
+      ul li span {
+        font-weight: 700;
+      }
+
+      ul li a {
+        color: $color-primary;
+        text-decoration: underline;
+      }
+    }
+
+    @media (max-width: 1024px) {
+
+      .photo {
+        &::after {
+          border-left: 80px solid transparent;
+          border-right: 80px solid transparent;
+          border-bottom: 80px solid $color-gray-10;
+        }
+
+        >img {
+          max-width: 100%;
+        }
+      }
+
+      column-gap:3rem;
+    }
+
+    @media (max-width: 767px) {
+      padding-top: 2.5rem;
+
+      grid-template-columns: 1fr;
+      column-gap: 0;
+
+      .photo {
+        order: 2;
+        position: relative;
+        margin: 2.5rem auto 0;
+        max-width: fit-content;
+
+        >img {
+          max-width: 100%;
+        }
+
+        &::after {
+          border-left: 50px solid transparent;
+          border-right: 50px solid transparent;
+          border-bottom: 50px solid $color-gray-10;
+          top: -8px;
+          right: -33px;
+        }
+      }
+    }
+  }
+}

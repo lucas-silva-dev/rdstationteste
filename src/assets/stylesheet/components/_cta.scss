@@ -1,0 +1,41 @@
+section.wrapper-cta {
+  margin-top: 7.5rem;
+
+  .cta {
+    background-image: url('../../images/cta-bg.png');
+
+    padding: 5.625rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $color-white;
+
+    h2 {
+      font-weight: 900;
+      line-height: 100%;
+      max-width: 600px;
+    }
+
+    p {
+      margin-top: 1.5rem;
+      max-width: 808px;
+
+      line-height: 150%;
+    }
+
+    .btn {
+      margin-top: 2.5rem;
+      width: 256px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 2.5rem;
+
+    .cta {
+      padding: 2rem 1rem;
+    }
+
+  }
+}

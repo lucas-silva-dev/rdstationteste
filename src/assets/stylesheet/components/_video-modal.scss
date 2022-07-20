@@ -1,0 +1,54 @@
+section.wrapper-modal {
+  z-index: 11;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(33, 36, 41, 0.8);
+
+
+
+  div.modal-content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1224px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      cursor: pointer;
+      position: absolute;
+      top: 1rem;
+      right: 3rem;
+      width: 60px;
+      height: 60px;
+
+      path {
+        fill: $color-white;
+      }
+
+      @media (max-width: 767px) {
+        top: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    iframe {
+      width: 70vw;
+      height: 80vh;
+
+      @media (max-width: 767px) {
+        width: 85vw;
+        height: 50vh;
+      }
+    }
+  }
+}

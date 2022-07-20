@@ -1,0 +1,62 @@
+.btn {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0px;
+  width: 94px;
+  height: 40px;
+  border: 2px solid transparent;
+
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 14px;
+
+  svg {
+    margin-left: 8px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(100% + 2px);
+    left: calc(0% - 2px);
+    // width: 86%;
+    width: calc(100% - 0.813rem);
+
+    border-top: 4px solid $color-black;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    height: 0;
+  }
+
+
+  &.-primary {
+    background-color: $color-primary;
+
+    &:hover {
+      background-color: $color-primary-50;
+    }
+
+  }
+
+  &.-secondary {
+    background-color: transparent;
+    border-color: $color-black;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  &.-highlighted {
+    background-color: $color-highlight;
+
+    &:hover {
+      background-color: $color-highlight-50;
+    }
+  }
+}

@@ -1,0 +1,244 @@
+header {
+  position: sticky;
+  top: 0;
+  padding: 0 16px;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-gray-30;
+  z-index: 10;
+
+  .wrapper-header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1224px;
+  }
+
+
+  .logo-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 174px;
+      max-height: 32px;
+    }
+  }
+
+  .nav-wrapper {
+    position: relative;
+    margin-left: auto;
+    height: 100%;
+
+    nav {
+      height: 100%;
+    }
+
+    .menu {
+      display: flex;
+      gap: 4rem;
+      height: 100%;
+
+    }
+
+    .menu-item>a {
+      font-size: 16px;
+      color: $color-gray-100;
+      font-weight: 700;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    @media (max-width: 1024px) {
+      display: none;
+
+      &.d-block {
+        display: block;
+      }
+
+      position: absolute;
+      top: 101%;
+      left: 0;
+      background-color: $color-white;
+      width: 100vw;
+      height: auto;
+
+      padding: 1.5rem 1rem;
+      border-bottom: 1px solid $color-gray-30;
+
+
+      nav {
+        height: auto;
+      }
+
+      .menu {
+        flex-direction: column;
+        gap: 0;
+        height: auto;
+
+        li+li {
+          border-top: 1px solid $color-gray-30;
+        }
+
+      }
+
+      .menu-item>a {
+        padding: 0.925rem 0;
+      }
+    }
+  }
+
+  .has-submenu {
+    position: relative;
+
+    @media (min-width: 1025px) {
+      &:hover {
+        .submenu {
+          display: flex;
+        }
+
+        >a img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+
+    >a img {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+
+      margin-left: 0.25rem;
+      transition: all 0.3s;
+
+
+    }
+
+    @media (max-width: 1024px) {
+      >a img {
+        margin-left: auto;
+
+      }
+
+      &.active {
+        >a img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .submenu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+
+    background: $color-white;
+    box-shadow: 0px 8px 18px rgba(33, 36, 41, 0.16);
+    padding: 24px;
+    border-radius: 2px;
+    gap: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .submenu-item {
+      display: flex;
+      flex-direction: column;
+
+      strong {
+        color: $color-primary;
+        font-family: $title-font;
+        font-size: 1.125rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+
+        border-bottom: 1px solid $color-gray-30;
+      }
+
+      a {
+        font-size: 0.875rem;
+        line-height: 1.313rem;
+        width: max-content;
+
+        &+a {
+          margin-top: 1rem;
+        }
+
+      }
+    }
+
+    @media (max-width: 1024px) {
+      &.active {
+        display: flex;
+        flex-direction: column;
+        width: calc(100vw - 2rem);
+        gap: 20px;
+        top: 102%;
+
+        .submenu-item {
+          &+li {
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .btn-wrapper {
+    margin-left: 4rem;
+    display: flex;
+    gap: 1rem;
+
+
+    .menu-btn {
+      display: none;
+    }
+
+    @media (max-width: 1024px) {
+      margin-left: auto;
+
+      .menu-btn {
+        display: block;
+        border: 0;
+        background: transparent;
+
+        img:not(.open) {
+          display: none;
+        }
+      }
+
+      button:not(.menu-btn) {
+        display: none;
+      }
+    }
+  }
+}
+
+//       ul.submenu
+//         li.submenu-item
+//           strong Metodologia
+//           a(href='#submenu-metodologia-1') Tudo sobre Inbound Marketing
+//         li.submenu-item
+//           strong Cursos
+//           a(href='#submenu-cursos-1') RD University
+//           a(href='#submenu-cursos-2') Introdução ao Inbound Marketing
+//           a(href='#submenu-cursos-3') RD Station Marketing Basic
+//         li.submenu-item
+//           strong Ferramentas
+//           a(href='#submenu-ferramentas-1') Avalie seu funil de vendas
+//           a(href='#submenu-ferramentas-2') Compare suas métricas de Email Marketing
+//           a(href='#submenu-ferramentas-3') Calcule o ROI do RD Station Marketing
+
+// button.btn.-secondary.
+//   Button
+// button.btn.-primary.
+//   Button
+//   <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+//     <path d="M10.2376 0.786174L13.5492 4.13013C13.7059 4.28837 13.7059 4.54493 13.5492 4.7032L10.2376 8.04716C9.98483 8.30244 9.55263 8.12165 9.55263 7.76064V5.36214H0.734652C0.513046 5.36214 0.333374 5.18071 0.333374 4.95693V3.87637C0.333374 3.65259 0.513046 3.47116 0.734652 3.47116H9.55263V1.07266C9.55263 0.711683 9.98487 0.530892 10.2376 0.786174Z" fill="#212429"/>
+// </svg>
